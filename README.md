@@ -26,21 +26,33 @@ This pipeline is built around a common Event schema. Every source format converg
 GCP Audit Logs
       │
       ▼
+
+      
   GCPSource         pull raw events (batch, checkpoint-resumable)
       │  raw dicts
       ▼
+
+      
   GCPNormalizer     raw dict  ->  validated common Event
       │  Event
       ▼
+
+      
   Pipeline          orchestrates; owns checkpointing, retry, dead-lettering
       │  Event
       ▼
+
+      
   SplunkFormatter   Event  ->  destination-shaped payload (HEC envelope)
       │  HEC payload
       ▼
+
+      
   SplunkSink        transport to SIEM; classifies failures
       │
       ▼
+
+      
     Splunk (HEC)
 
 Sources and Normalizer interfaces are per-source. A Source pulls raw events from one system and a Normalizer maps that system's format into the common schema (Event).
