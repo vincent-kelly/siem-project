@@ -1,10 +1,10 @@
-#**SIEM Ingestion Pipeline**
+# **SIEM Ingestion Pipeline**
 
 
 This is a production-style data pipeline built in Python. It pulls logs from various sources (just GCP for now), normalizes these raw events into a defined common schema, and delivers them to Splunk utilizing an least-once reliability design.
 
 
-##**Status**
+## **Status**
 
 Working end-to-end: GCP → Splunk. Tested. See Known Limitations for scoped tradeoffs.
 
