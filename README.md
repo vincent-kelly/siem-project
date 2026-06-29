@@ -15,7 +15,18 @@ SOCs need clean, normalized log data from various sources all flowing into one s
 
 This project implements an ingestion pipeline that pulls logs from GCP Audit Logs, normalizes them into a single event schema, and them ships these events to Splunk via HEC (HTTP Event Collector). The pipeline is structured for flexibility: adding a new source or new destination is an addition and not a modification.
 
-I've decided to build this system in order to get a better understanding of data pipelines in a domain that is in my field of study (cybersecurity). I have experience utilizing various SIEMs for IR as well as tailoring detections, however I have not been able to see what the infrastructure enabling the SIEM looks like. This project accounted for that gap.
+I've decided to build this system in order to get a better understanding of data pipelines in a domain that is in my field of study (cybersecurity). I have experience utilizing various SIEMs for IR as well as tailoring detections, however I have not been able to see what the infrastructure enabling the SIEM looks like. This project accounted for that gap.  
+
+## **Video Demo**
+
+
+
+
+https://github.com/user-attachments/assets/46cffe91-990d-4edb-be41-918692afadde
+
+
+
+
 
 
 ## **Architecture**
