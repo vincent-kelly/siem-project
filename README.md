@@ -72,11 +72,23 @@ Dead-letter file. Failed events (normalization failures and poisoned batches) ar
 Project Structure
 
 .
+
+
 ├── schema.py            # Abstract interfaces (Source, Normalizer, Formatter, Sink) and common Event schema
+
+
 ├── gcp_src.py           # GCPSource: pulls GCP audit logs, GCPNormalizer: GCP raw -> Event
+
+
 ├── pipeline.py          # Pipeline orchestrator, checkpoint/dead-letter/retry helpers, FileSink, SplunkFormatter, SplunkSink
+
+
 ├── tests/               # unit tests (source, normalizer, formatter, pipeline, retry)
+
+
 ├── pyproject.toml       # Poetry project + dependencies
+
+
 └── README.md
 
 
