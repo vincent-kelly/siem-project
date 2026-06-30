@@ -67,6 +67,9 @@ def test_checkpoint_and_query():
     assert "timestamp >=" not in fake_client.received_filter
 
 def test_normalize_batch_execution():
+    """
+    basically ensuring that our normalize batch function actually normalizes a LogObject (raw event) per our common schema
+    """
     raw_event = {
         "insertId": "abc123",
         "timestamp": "2026-06-28T01:38:46.664569Z",
@@ -276,7 +279,7 @@ def test_write_with_retry_recovers_from_transient():
 def test_write_with_retry_halts_after_exhaustion():
     """
     ensuring that a write with retry will halt after N amount of transient errors
-    ensures that we are continously hitting an endpoint if we can't reach it after N times
+    ensures that we aren't continously hitting an endpoint if we can't reach it after max tries
     """
     sink = BadSink(fail_times=999)  
     with patch("time.sleep"):
