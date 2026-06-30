@@ -222,6 +222,7 @@ Null Description. Each normalized event contains a description field, as of now 
 Additional sources (Okta system logs, CrowdStrike, AWS CloudTrail).
 UDM formatter targeting Google SecOps.
 CI pipeline (lint, formatting, testing).
+Deploy a honeynet on GCP to pull real telemetry (build some detections off of them - would switch sink to Elastic then).
 
 
 
